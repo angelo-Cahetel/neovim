@@ -1,31 +1,23 @@
 return {
 	{
 		"mason-org/mason.nvim",
+		dependencies = {
+			"mason-org/mason-lspconfig.nvim",
+			"neovim/nvim-lspconfig",
+		},
 		config = function()
 			require("mason").setup()
-		end,
-	},
-	{
-		"mason-org/mason-lspconfig.nvim",
-		opts = {
-			automatic_enable = {
-				exclude = {
-					"jdtls",
-				},
-			},
-		},
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			vim.lsp.config("foo", { cmd = { "true" } })
-			vim.lsp.enable("foo")
-			vim.lsp.enable("ts_ls")
 
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls", "eslint", "ts_ls", "tailwindcss" },
+			})
+
+      vim.diagnostic.config({
+        virtual_text = true,
+        underline = true
+      })
+
+			vim.lsp.enable("lua_ls")
 		end,
 	},
-	{ "mfussenegger/nvim-jdtls" },
 }
