@@ -13,5 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
 
+vim.keymap.set("i", "jj", "<Esc>")
+
 require("vim-options")
 require("lazy").setup("plugins")
