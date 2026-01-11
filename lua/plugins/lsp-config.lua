@@ -9,13 +9,13 @@ return {
 			require("mason").setup()
 
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "eslint", "ts_ls", "tailwindcss" },
+				ensure_installed = { "lua_ls", "eslint", "ts_ls", "tailwindcss", "pytight", "pylsp" },
 			})
 
-      vim.diagnostic.config({
-        virtual_text = true,
-        underline = true
-      })
+			vim.diagnostic.config({
+				virtual_text = true,
+				underline = true,
+			})
 
 			vim.lsp.enable("lua_ls")
 		end,
