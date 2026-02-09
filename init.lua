@@ -16,4 +16,8 @@ local opts = {}
 vim.keymap.set("i", "jj", "<Esc>")
 
 require("vim-options")
-require("lazy").setup("plugins")
+require("lazy").setup({
+	spec = {
+		{ import = "plugins" },
+	},
+})
