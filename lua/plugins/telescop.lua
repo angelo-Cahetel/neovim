@@ -29,7 +29,7 @@ return {
       pcall(telescope.load_extension, "ui-select")
 
       -- Atalhos
-      vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+      vim.keymap.set("n", "<leader>s", builtin.find_files, {})
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
     end,
   },

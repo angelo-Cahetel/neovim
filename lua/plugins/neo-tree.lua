@@ -8,6 +8,12 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
+			window = {
+				highlights = {
+					normal = "NormalNC",
+					normalnc = "NormalNC",
+				},
+			},
 			filesystem = {
 				filtered_items = {
 					visible = false,
@@ -26,7 +32,6 @@ return {
 				},
 			},
 		})
-		vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal left<CR>", {})
 		vim.keymap.set("n", "<leader>b", ":Neotree filesystem toggle left<CR>", {})
 	end,
 }
