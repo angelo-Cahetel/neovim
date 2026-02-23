@@ -1,4 +1,4 @@
 return {
 	"fedepujol/bracketpair.nvim",
-	enabled = false,
+	enabled = true,
 }
