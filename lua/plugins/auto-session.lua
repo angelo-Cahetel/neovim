@@ -16,5 +16,6 @@ return {
 			silent = true,
 			desc = "Search sessions",
 		})
+		vim.keymap.set("i", "<C-d>", "<cmd>AutoSession delete<CR>", {})
 	end,
 }
