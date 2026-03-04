@@ -8,6 +8,7 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
+			use_popups_for_input = false,
 			window = {
 				highlights = {
 					normal = "NormalNC",

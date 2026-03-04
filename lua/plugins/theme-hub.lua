@@ -1,5 +1,6 @@
 return {
   "erl-koenig/theme-hub.nvim",
+  enabled = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
