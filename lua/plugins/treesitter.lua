@@ -14,7 +14,6 @@ return {
 				"javascript",
 				"typescript",
 				"tsx",
-				"jsx",
 				"yaml",
 				"html",
 				"css",
@@ -32,7 +31,7 @@ return {
 				"vimdoc",
 				"c",
 			},
-			incremental_selecion = {
+			incremental_selection = {
 				enable = true,
 				keymaps = {
 					init_selection = "<C-space>",
