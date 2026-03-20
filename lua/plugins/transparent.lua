@@ -1,6 +1,6 @@
 return {
   "xiyaowong/transparent.nvim",
-  enabled = false,
+  enabled = true,
   config = function()
     require("transparent").setup({
       extra_groups = {
